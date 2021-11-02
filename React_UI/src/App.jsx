@@ -7,18 +7,18 @@ import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
+    <Router>
+      <div className="App">
         <Switch>
           <Route exact path="/">
             <LandingPage />
           </Route>
-          <Route path="/contacts">
+          <Route exact path="/contacts">
             <Contacts />
           </Route>
         </Switch>
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 }
 

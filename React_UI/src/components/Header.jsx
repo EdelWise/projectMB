@@ -7,10 +7,10 @@ export default function Header() {
   return (
     <header className="navbar">
       <div className="logo">
-        <a href="#" className="logo-image">
+        <a href="/contacts" className="logo-image">
           <img src={logo} alt="logo" />
         </a>
-        <a href="#" className="logo-text">
+        <a href="/contacts" className="logo-text">
           <img src={pineapple} alt="logo" />
         </a>
       </div>
