@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { urlRead, urlCreate, urlDelete } from "../endpoints";
+import { urlRead, urlDelete } from "../endpoints";
 
 export default function Contacts() {
   const [data, setData] = React.useState([]);

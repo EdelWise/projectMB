@@ -4,7 +4,6 @@ import Heading from "../components/Heading";
 import Form from "../components/Form";
 import Terms from "../components/Terms";
 import SocialBar from "../components/SocialBar";
-import Success from "../components/Success";
 import successIMG from "../images/ic_success.png";
 
 export default function LandingPage() {
@@ -18,7 +17,7 @@ export default function LandingPage() {
         <main>
           {submited && (
             <div className="success-image">
-              <img src={successIMG}></img>
+              <img src={successIMG} alt="trophy success"></img>
             </div>
           )}
           <Heading submited={submited} />
