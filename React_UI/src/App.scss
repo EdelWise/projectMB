@@ -1,0 +1,469 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&family=PT+Serif&family=Roboto:wght@500&display=swap");
+$primary-color: #f2f5fa;
+$secondary-color: #e2e3e4;
+$primary-text-color: #131821;
+$secondary-text-color: #6a707b;
+$active-color: #4066a5;
+$border-color: #e3e3e4;
+
+$main-font: Arial;
+$secondary-font: "Georgia", serif;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App {
+  height: 100vh;
+  width: 100%;
+}
+
+.split-screen {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 680px 1fr;
+}
+
+.split-left {
+  background: linear-gradient(180deg, #ffffff 0%, $primary-color 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.split-right {
+  background: url("./images/image_summer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main {
+  padding: 30px 20px 30px 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 680px) {
+  .split-screen {
+    grid-template-columns: 100%;
+    background: url("./images/image_summer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .split-left {
+    background: url("./images/image_summer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 55% 45%;
+    background-attachment: fixed;
+  }
+
+  .split-right {
+    display: none;
+  }
+  main {
+    background: linear-gradient(180deg, #ffffff 0%, $primary-color 100%);
+
+    margin-top: 25%;
+    height: auto;
+    background: $primary-color;
+    width: 90%;
+  }
+}
+
+// .background-image {
+//   width: 100%;
+//   height: 100%;
+//   background: url("./images/image_summer.jpg");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: 65% 35%;
+//   background-attachment: fixed;
+// }
+
+header {
+  margin-top: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo-image {
+  margin-right: 10px;
+}
+
+header .logo-text {
+  margin-top: 10px;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 50%;
+}
+
+header ul li {
+  margin-top: 10px;
+}
+
+header ul li a {
+  text-decoration: none;
+  white-space: nowrap;
+
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: $secondary-text-color;
+}
+
+@media only screen and (max-width: 680px) {
+  header {
+    background-color: #ffff;
+    height: 8%;
+    width: 100%;
+    margin-top: 0px;
+    justify-content: space-around;
+  }
+
+  header .logo-text {
+    display: none;
+  }
+  header ul li a {
+    color: $secondary-text-color;
+    font-family: $main-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  header ul {
+    justify-content: space-between;
+  }
+}
+
+//heading
+
+.heading {
+  width: 60%;
+}
+
+.main-heading {
+  color: $primary-text-color;
+  font-family: $secondary-font;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.sub-heading {
+  font-family: $main-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+//success image
+
+.success-image {
+  width: 60%;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 680px) {
+  .heading {
+    width: 90%;
+  }
+  .main-heading {
+    color: $primary-text-color;
+
+    font-family: $secondary-font;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    margin-bottom: 10px;
+  }
+
+  .sub-heading {
+    color: $secondary-text-color;
+
+    font-family: $main-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    margin-bottom: 20px;
+  }
+}
+
+//form
+
+form {
+  width: 100%;
+  position: relative;
+  left: 83px;
+  margin-bottom: 53px;
+}
+
+.input-group {
+  display: flex;
+  border: 1px solid $border-color;
+  border-left: 4px solid $active-color;
+}
+
+form .input-group input {
+  height: 70px;
+  width: calc(100% - 83px);
+  border: none;
+  text-indent: 48px;
+  background-color: $primary-color;
+  color: $primary-text-color;
+
+  font-family: $main-font;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+form .input-group input:focus {
+  outline: none;
+  text-indent: 48px;
+  box-shadow: 0px 30px 40px 0px #1318210f;
+}
+form .input-group input:hover {
+  box-shadow: 0px 30px 40px 0px #1318210f;
+}
+form .input-group input::placeholder {
+  color: $secondary-text-color;
+  font-family: $main-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 20px;
+  text-indent: 48px;
+}
+
+form .input-group .btn {
+  height: 70px;
+  width: 83px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary-color;
+}
+
+.btn {
+  border: none;
+}
+
+form p {
+  margin: 10px;
+  margin-left: 40px;
+}
+
+@media only screen and (max-width: 680px) {
+  form {
+    position: static;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  form .input-group input {
+    height: 60px;
+  }
+
+  form .input-group .btn {
+    height: 60px;
+    width: 83px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $primary-color;
+  }
+  form .input-group input::placeholder {
+    color: $secondary-text-color;
+    font-family: $main-font;
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    text-indent: 10px;
+  }
+}
+
+//terms of services
+
+.tos {
+  width: 50%;
+  display: flex;
+  align-items: center;
+
+  font-family: $main-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.tos input {
+  margin: 5px;
+  height: 26px;
+  width: 26px;
+}
+.tos label {
+  font-family: $main-font;
+  color: $secondary-text-color;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@media only screen and (max-width: 680px) {
+  .tos {
+    width: 90%;
+  }
+}
+
+hr {
+  width: 400px;
+  height: 1px;
+  left: 140px;
+  top: 740px;
+
+  background: $border-color;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 680px) {
+  hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+}
+
+.social-icons a {
+  margin: 10px;
+  border-radius: 50%;
+  font-size: 40px;
+  color: border-color;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+  border-color: $border-color;
+  &:hover {
+    box-shadow: 0px 20px 40px 0px #1318214d;
+    border-style: none;
+  }
+  &:active {
+    box-shadow: 0px 20px 40px 0px #1318214d;
+    border-style: none;
+  }
+}
+.social-icons .icon-Facebook {
+  &:hover {
+    background: #4267b2;
+    color: #ffffff;
+  }
+  &:active {
+    background: #2f4a80;
+    color: #ffffff;
+  }
+}
+
+.social-icons .icon-Instagram {
+  &:hover {
+    background: #c13584;
+    color: #ffffff;
+  }
+  &:active {
+    background: #8f2762;
+    color: #ffffff;
+  }
+}
+.social-icons .icon-Twitter {
+  &:hover {
+    background: #1da1f2;
+    color: #ffffff;
+  }
+  &:active {
+    background: #177fbf;
+    color: #ffffff;
+  }
+}
+.social-icons .icon-Youtube {
+  &:hover {
+    background: #ff0000;
+    color: #ffffff;
+  }
+  &:active {
+    background: #cc0000;
+    color: #ffffff;
+  }
+}
+CC0000
+
+// <a class="icon-Facebook"></a>
+//       <a class="icon-Instagram"></a>
+//       <a class="icon-Twitter"></a>
+// <a class="icon-Youtube"></a>
+
+.icon-Facebook-1 table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
