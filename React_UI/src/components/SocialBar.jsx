@@ -3,10 +3,10 @@ import React from "react";
 export default function SocialBar() {
   return (
     <div className="social-icons">
-      <a href="#" className="icon-Facebook"></a>
-      <a href="#" className="icon-Instagram"></a>
-      <a href="#" className="icon-Twitter"></a>
-      <a href="#" className="icon-Youtube"></a>
+      <a className="icon-Facebook"></a>
+      <a className="icon-Instagram"></a>
+      <a className="icon-Twitter"></a>
+      <a className="icon-Youtube"></a>
     </div>
   );
 }
