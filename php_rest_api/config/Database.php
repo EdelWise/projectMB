@@ -4,7 +4,7 @@
     private $host = 'localhost';
     private $db_name = 'signups';
     private $username = 'root';
-    private $password = '';
+    private $password = 'test12345';
     private $conn;
 
     // DB Connect
