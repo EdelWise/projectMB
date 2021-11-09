@@ -11,16 +11,14 @@ export default function Form({ checked, setSubmited }) {
     extractEmailProvider(formData.email);
   }, [formData.email]);
 
-  function sendData() {
-    axios
-      .post(urlCreate, formData)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+  const sendData = async () => {
+    try {
+      const response = await axios.post(urlCreate, formData);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const emailValidation = (e) => {
     let formIsValid = true;
@@ -74,7 +72,6 @@ export default function Form({ checked, setSubmited }) {
       return true;
     } else {
       console.log("Form has errors.");
-
       return false;
     }
   }
